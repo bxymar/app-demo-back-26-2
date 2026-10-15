@@ -28,7 +28,7 @@ public interface ProductoRepositorio extends JpaRepository<Producto, Long> {
             p.nombre,
             p.precio
             )
-            FROM Producto p
+            FROM Producto p WHERE p.precio > 30
             """)
     List<ProductoListarNombrePrecio> listarProductoNombrePrecio();
 }
